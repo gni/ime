@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
-    
+
     try {
       const exifData = await exifr.parse(file);
       if (exifData && Object.keys(exifData).length) {
@@ -32,7 +32,7 @@ export default function Home() {
         ))}
       </div>
     );
-  }
+  };
 
   return (
     <main className="flex flex-col min-h-screen items-center justify-center p-12 space-y-8">
@@ -42,14 +42,18 @@ export default function Home() {
         <p className="font-mono text-sm mb-4 text-center">
           Upload an image to extract its metadata.
         </p>
-        
+
         <input type="file" onChange={handleImageUpload} className="mb-4 p-2 border rounded" />
-        
+
         {metadata && (
           <>
-            <div className="flex space-x-4 my-4">
-              <button onClick={() => setDisplayFormat('json')} className="px-4 py-2 border rounded shadow-md hover:bg-blue-900 transition-all duration-200">Show as JSON</button>
-              <button onClick={() => setDisplayFormat('html')} className="px-4 py-2 border rounded shadow-md hover:bg-blue-900 transition-all duration-200">Show as HTML</button>
+            <div className="my-4">
+              <button
+                onClick={() => setDisplayFormat(prevFormat => prevFormat === 'json' ? 'html' : 'json')}
+                className="px-4 py-2 border rounded shadow-md hover:bg-blue-900 transition-all duration-200"
+              >
+                {displayFormat === 'json' ? 'Show as HTML' : 'Show as JSON'}
+              </button>
             </div>
             <div className="p-4 rounded w-full overflow-auto shadow-inner">
               {displayFormat === 'json' ? <pre>{JSON.stringify(metadata, null, 2)}</pre> : renderMetadataHTML(metadata)}
