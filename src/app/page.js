@@ -62,9 +62,9 @@ export default function Home() {
         <h2 className="text-xl font-bold mb-4">How to Use</h2>
         <ol className="list-decimal pl-5 space-y-2 text-left">
           <li>Click on the file input above to select an image from your device.</li>
-          <li>Once selected, the app will automatically read the image's metadata.</li>
+          <li>Once selected, the app will automatically read the image&apos;s metadata.</li>
           <li>If the image contains metadata, it will be displayed below the input in either JSON or HTML format.</li>
-          <li>If there's an issue reading the metadata or none is found, an appropriate message will be shown.</li>
+          <li>If there&apos;s an issue reading the metadata or none is found, an appropriate message will be shown.</li>
         </ol>
       </section>
 
