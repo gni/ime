@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import exifr from 'exifr';
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
         <h1 className="text-3xl font-semibold mb-6 text-center">Image Metadata Extractor</h1>
 
         <p className="font-mono text-sm mb-4 text-center">
-          Upload an image to extract its metadata.
+          Upload an image to extract it's metadata.
         </p>
 
         <input type="file" onChange={handleImageUpload} className="mb-4 p-2 border rounded" />
