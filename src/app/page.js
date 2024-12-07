@@ -74,7 +74,7 @@ export default function Home() {
 
       <footer className="bottom-1 left-0 right-0 text-center text-sm">
         <p>{new Date().getFullYear()} | Lucian BLETAN</p>
-        <a href="https://github.com/exaluc/ime" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub Repository</a>
+        <a href="https://github.com/gni/ime" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub Repository</a>
       </footer>
     </main>
   )
